@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from tavily import TavilyClient
 import os
 #change WHEN RUNNING ON ORCHESTRATOR:
-from extract_claims import Claim
+from agent.functions.extract_claims import Claim
 # RESEARCH_CLAIM: takes ONE claim and returns the vidence
 load_dotenv()
 gemini_client = genai.Client()
@@ -23,6 +23,7 @@ class Evidence(BaseModel):
     score: float
 
 def research_claim(input_claim: Claim, num_queries_per_claim: int) -> List[Evidence]:
+    print("input claim:", input_claim.claim_text)
     #first, turn the claim into searchable queries
     evidence_list = []
     input_claim = input_claim.claim_text

@@ -47,3 +47,15 @@ LATER FOR EXTRACT CLAIMS:
 
 ERRORS:
 - decieded to handle in the orchestrator, not in each individual function
+
+
+
+07/07:
+finished basic first agent
+things to do next:
+1. parallelism - these claims don't have to be processed sequentially
+    reasoning: eveyrting else builds on the agent and this makes it much faster/usable
+    - decide on threads or async https://mmantratech.com/threading-vs-asyncio-in-python-easy-examples-when-to-use-each
+2. global evidence
+3. extension + DOM reading
+4. cloud/deploy stuff

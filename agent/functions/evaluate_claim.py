@@ -5,8 +5,8 @@ from pydantic import BaseModel, Field
 from typing import List, Optional
 from dotenv import load_dotenv
 import os
-from extract_claims import Claim
-from research_claim import Evidence, research_claim
+from agent.functions.extract_claims import Claim
+from agent.functions.research_claim import Evidence, research_claim
 
 #takes one Claim and a list[Evidence] and returns one Verdict (label + justification + sources cited)
 #v1: decide on source reliability purely with some prompt

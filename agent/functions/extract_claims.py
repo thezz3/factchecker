@@ -49,7 +49,7 @@ def extract_claims(input_text: str) -> Claims:
         "response_schema": Claims,
         }
     )
-
+    print("claims response:", response.parsed)
     return response.parsed
 
 
