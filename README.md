@@ -44,6 +44,11 @@ LATER FOR EXTRACT CLAIMS:
  https://docs.tavily.com/documentation/quickstart
 
 
+Parallelism:
+https://ai.google.dev/gemini-api/docs/migrate    - aio for asyncio
+https://docs.tavily.com/sdk/python/reference    - AsyncTavilyClient
+
+https://mmantratech.com/threading-vs-asyncio-in-python-easy-examples-when-to-use-each - for learning and decision
 
 ERRORS:
 - decieded to handle in the orchestrator, not in each individual function
@@ -53,10 +58,16 @@ ERRORS:
 07/07:
 finished basic first agent
 things to do next:
-0. error handling in orchestrator
-1. parallelism - these claims don't have to be processed sequentially
+0. error handling in orchestrator  - done
+1. parallelism - these claims don't have to be processed sequentially  - DONE
     reasoning: eveyrting else builds on the agent and this makes it much faster/usable
     - decide on threads or async https://mmantratech.com/threading-vs-asyncio-in-python-easy-examples-when-to-use-each
+
+    speedup on our Mt. Everest test:
+    no parallelism: 
+    parllelism basic: 32.27s
+    parallelism advanced (research claim internal asyncio): 27.04s
+
 2. global evidence
 3. extension + DOM reading
 4. cloud/deploy stuff

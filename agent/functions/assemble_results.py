@@ -10,9 +10,10 @@ from agent.functions.evaluate_claim import Verdict, Label
 
 class Result(BaseModel):
     claim: Claim
-    source_urls: List[str]
-    label: str 
-    justification: str
+    source_urls: Optional[List[str]] = None
+    label: Optional[str] = None
+    justification: Optional[str] = None
+    error: Optional[str] = Field(default=None, description="An optional error message if something went wrong during processing")
 
 def assemble_result(claim: Claim, verdict: Verdict, evidence_list: List[Evidence]) -> Result:
     source_urls = [evidence_list[n-1].url for n in verdict.sources_cited]
@@ -21,5 +22,6 @@ def assemble_result(claim: Claim, verdict: Verdict, evidence_list: List[Evidence
         claim=claim,
         source_urls=source_urls,
         label=verdict.label.value,
-        justification=verdict.justification
+        justification=verdict.justification,
+        error=None #for redundancy 
     )
