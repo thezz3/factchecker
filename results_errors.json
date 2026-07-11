@@ -1,0 +1,218 @@
+[
+  {
+    "claim": {
+      "claim_text": "Mount Everest is the tallest mountain on Earth, rising 8,849 meters above sea level.",
+      "source_span": "Mount Everest is the tallest mountain on Earth, rising 8,849 meters above sea level"
+    },
+    "source_urls": [
+      "https://www.britannica.com/place/Mount-Everest",
+      "https://education.nationalgeographic.org/resource/mount-everest",
+      "https://www.guinnessworldrecords.com/world-records/tallest-mountain",
+      "https://geology.com/records/highest-mountain-in-the-world.shtml",
+      "https://www.iflscience.com/in-1954-surveyors-found-mount-everest-to-be-exactly-29000-feet-they-added-2-extra-feet-so-people-would-believe-them-83629"
+    ],
+    "label": "refuted",
+    "justification": "The claim that Mount Everest is the \"tallest mountain on Earth\" is refuted. While Mount Everest is the highest mountain above sea level, rising to an elevation of 8,849 meters (Source 6, 9), it is not the tallest mountain when measured from base to summit. Mauna Kea in Hawaii is considered the tallest mountain, with much of its base located below sea level (Source 2, 3, 14)."
+  },
+  {
+    "claim": {
+      "claim_text": "Mount Everest is overrated as a climbing destination.",
+      "source_span": "it's overrated as a climbing destination."
+    },
+    "source_urls": [
+      "https://www.pbs.org/newshour/world/overcrowding-on-mount-everest-contributes-to-rise-in-deaths",
+      "https://geographical.co.uk/news/everest-climbing-into-crisis",
+      "https://www.himalayanrecreation.com/blog/everest-traffic-jam",
+      "https://www.eliteexped.com/cost-to-climb-mount-everest"
+    ],
+    "label": "not enough information",
+    "justification": "The claim that Mount Everest is \"overrated\" as a climbing destination is a subjective opinion or value judgment. Factual evidence regarding overcrowding, dangers, or costs (as presented in sources 1, 2, 4, 6) cannot objectively support or refute a subjective assessment of being \"overrated.\""
+  },
+  {
+    "claim": {
+      "claim_text": "The first confirmed summit of Mount Everest was in 1953 by Edmund Hillary and Tenzing Norgay.",
+      "source_span": "The first confirmed summit was in 1953 by Edmund Hillary and Tenzing Norgay."
+    },
+    "source_urls": [
+      "https://www.history.com/this-day-in-history/may-29/hillary-and-tenzing-reach-everest-summit",
+      "https://en.wikipedia.org/wiki/1953_British_Mount_Everest_expedition",
+      "https://www.britannica.com/biography/Edmund-Hillary",
+      "https://en.wikipedia.org/wiki/Edmund_Hillary",
+      "https://www.nationalgeographic.com/adventure/article/sir-edmund-hillary-tenzing-norgay-1953",
+      "https://explorerspassage.com/chronicles/history-mount-everest",
+      "https://en.wikipedia.org/wiki/Timeline_of_Mount_Everest_expeditions",
+      "https://en.wikipedia.org/wiki/Mount_Everest"
+    ],
+    "label": "supported",
+    "justification": "Multiple reliable sources confirm that Edmund Hillary and Tenzing Norgay were the first known or confirmed explorers to reach the summit of Mount Everest on May 29, 1953 (1, 2, 4, 6, 7). Earlier expeditions attempted the summit but did not succeed (10, 11, 12)."
+  },
+  {
+    "claim": {
+      "claim_text": "These days Mount Everest is basically a tourist trap.",
+      "source_span": "it's basically a tourist trap"
+    },
+    "source_urls": [
+      "https://www.ucf.edu/pegasus/too-many-tourists",
+      "https://education.nationalgeographic.org/resource/trash-and-overcrowding-top-world",
+      "https://www.quora.com/Why-do-experienced-climbers-often-criticize-the-commercial-Everest-expeditions-and-what-alternatives-do-they-admire-instead",
+      "https://geographical.co.uk/news/everest-climbing-into-crisis",
+      "https://www.furtenbachadventures.com/en/how-much-does-it-cost-to-climb-mount-everest",
+      "https://zaratanzaniaadventures.com/how-much-does-it-cost-to-climb-mount-everest"
+    ],
+    "label": "supported",
+    "justification": "Multiple sources describe Mount Everest as being heavily impacted by an increase in tourism, leading to overcrowding, pollution, and a highly commercialized environment. Descriptions like \"people queuing to reach the top,\" \"overcrowded and full of trash,\" and resembling a \"crowded amusement park queue\" strongly support the claim that it's become a tourist trap (1, 5, 9). The high costs of expeditions further emphasize its commercial nature (10, 11, 12)."
+  },
+  {
+    "claim": {
+      "claim_text": "Anyone paying $50,000 to climb Mount Everest has more money than sense.",
+      "source_span": "anyone paying $50,000 to climb it has more money than sense."
+    },
+    "source_urls": [
+      "https://www.expedreview.com/blog/how-much-does-it-cost-to-climb-mt-everest",
+      "https://www.ndtv.com/world-news/want-to-mount-climb-everest-here-is-how-much-it-can-cost-you-11574252",
+      "https://www.namasadventure.com/7000m-8000mexpeditions-blog-posts/how-much-does-it-cost-to-climb-mount-everest",
+      "https://www.alpineascents.com/climbs/mount-everest/price-schedule",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC1553507",
+      "https://peakclimbingnepal.com/dangers-of-climbing-mount-everest",
+      "https://www.thehindu.com/sci-tech/energy-and-environment/why-is-climbing-mount-everest-so-dangerous/article66904138.ece",
+      "https://www.topchinatravel.com/mount-everest/dangers-of-climbing-mount-everest.htm",
+      "https://www.eliteexped.com/how-dangerous-is-climbing-mount-everest",
+      "https://marveltreks.com/what-are-the-dangers-of-climbing-mount-everest",
+      "https://www.adlers.com.au/why-climb-mount-everest",
+      "https://www.livereal.com/movies/everest-why-people-climb",
+      "https://www.reddit.com/r/Everest/comments/1jyoi28/why_do_ppl_want_to_climb_mt_everest",
+      "https://www.quora.com/What-is-the-reason-behind-peoples-obsession-with-climbing-Mount-Everest-Is-the-experience-worth-the-potential-dangers-and-challenges"
+    ],
+    "label": "not enough information",
+    "justification": "The claim is a subjective value judgment, stating that someone paying $50,000 to climb Mount Everest has 'more money than sense'. While the evidence provides information on the cost of climbing Everest (Sources 1, 2, 3, 4), the dangers involved (Sources 10, 11, 12, 13, 14, 15), and various motivations for doing so (Sources 6, 7, 8, 9), it does not offer any objective criteria to assess whether such an individual lacks 'sense'. Therefore, this claim cannot be supported or refuted by factual evidence."
+  },
+  {
+    "claim": {
+      "claim_text": "Mount Everest sits on the border between Nepal and China.",
+      "source_span": "The mountain sits on the border between Nepal and China."
+    },
+    "source_urls": [
+      "https://nepalgatewaytrekking.com/blog/where-is-mt-everest-located",
+      "https://www.nepalhikingteam.com/where-is-mount-everest",
+      "https://www.chinahighlights.com/tibet/mt-everest/nepal-side-and-china-side.htm"
+    ],
+    "label": "supported",
+    "justification": "Multiple reliable sources confirm that Mount Everest is situated on the international border between Nepal and China, with its summit forming the exact boundary between the two countries. Sources 2, 3, and 6 explicitly state that the mountain, including its summit, is shared by both nations."
+  },
+  {
+    "claim": {
+      "claim_text": "Mount Everest climbing season is mostly limited to May because of weather.",
+      "source_span": "Climbing season is mostly limited to May because of weather"
+    },
+    "source_urls": [
+      "https://www.eliteexped.com/best-time-to-climb-mount-everest",
+      "https://www.outsideonline.com/outdoor-adventure/everest/what-is-mount-everest-season-we-answer-your-questions-about-the-worlds-highest-peak",
+      "https://www.furtenbachadventures.com/en/guidebook/best-everest-season",
+      "https://lifehimalayatrekking.com/blog/when-is-the-everest-climbing-season-2026",
+      "https://www.himalayanglacier.com/best-time-to-climb-mount-everest",
+      "https://www.tibettravel.org/winter-tour/everest-winter.html"
+    ],
+    "label": "refuted",
+    "justification": "The evidence refutes the claim that the Mount Everest climbing season is mostly limited to May. While May is widely considered the best month for summit attempts due to favorable weather windows (Source 2, 4), the overall spring climbing season typically spans from March to May or April to May (Source 2, 3, 7, 11). Furthermore, an autumn climbing season, usually from September to November, is also noted as a suitable period for climbing due to stable weather conditions (Source 7, 11, 12), indicating the season is not primarily confined to May."
+  },
+  {
+    "claim": {
+      "claim_text": "Mount Everest climbing has gotten way too commercialized.",
+      "source_span": "the whole thing has gotten way too commercialized."
+    },
+    "source_urls": [
+      "https://factsanddetails.com/south-asia/Nepal/Himalayas/entry-7875.html",
+      "https://www.pbs.org/newshour/world/overcrowding-on-mount-everest-contributes-to-rise-in-deaths",
+      "https://www.youtube.com/watch?v=E1FcO6IMQ68",
+      "https://www.himalayanrecreation.com/blog/everest-traffic-jam",
+      "https://www.facebook.com/groups/mounteverest8848M/posts/2307170546758013",
+      "https://www.adventurealternative.com/blog/how-much-does-it-cost-to-climb-mount-everest",
+      "https://www.alpineascents.com/climbs/mount-everest",
+      "https://mountainmadness.com/trips/mount-everest-climbing-expedition",
+      "https://climbingthesevensummits.com/2026-ctss-everest-program-cost-guide"
+    ],
+    "label": "supported",
+    "justification": "The evidence strongly supports the claim that Mount Everest climbing has become highly commercialized. Multiple sources highlight the existence of numerous commercial expedition operators, the high costs associated with guided trips, and the resulting issues like overcrowding and concerns over safety being secondary to revenue. For example, evidence [4], [6], [7], and [8] specifically point to the negative impacts of commercialization, such as \"Everest traffic jams\" and governments prioritizing revenue, while many others detail the extensive commercial services and costs involved [1, 3, 11, 12, 15]."
+  },
+  {
+    "claim": {
+      "claim_text": "Over 300 people have died on Mount Everest since records began.",
+      "source_span": "Over 300 people have died on Everest since records began."
+    },
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/List_of_people_who_died_climbing_Mount_Everest",
+      "https://www.reddit.com/r/wikipedia/comments/1rnlb0u/list_of_people_who_died_climbing_mount_everest_at",
+      "https://www.instagram.com/reel/DWQO0RNjIuS?hl=en"
+    ],
+    "label": "supported",
+    "justification": "The evidence indicates that over 300 people have died on Mount Everest since records began. Specifically, one source states that \"At least 346 people have died attempting to reach\u2014or return from\u2014the summit of Mount Everest,\" with the first recorded deaths dating back to 1922. Other sources corroborate this, reporting numbers such as \"at least 344\" or \"over 340\" deaths."
+  },
+  {
+    "claim": {
+      "claim_text": "The summit of Mount Everest is so high that the air has only about a third of the oxygen available at sea level.",
+      "source_span": "The summit is so high that the air has only about a third of the oxygen available at sea level"
+    },
+    "source_urls": [
+      "https://mountainmedicineblog.7thwave.io/cgi-bin/renderpost.py?postid=1235",
+      "https://hypertextbook.com/facts/2001/JaredGoldberger.shtml",
+      "https://wildsafe.org/resources/ask-the-experts/altitude-safety-101/oxygen-levels"
+    ],
+    "label": "supported",
+    "justification": "The claim is supported. While the *percentage* of oxygen in the air remains constant at around 21% regardless of altitude, the *atmospheric pressure* at the summit of Mount Everest is approximately one third of that at sea level (Sources 6, 7). This reduction in atmospheric pressure leads to a corresponding decrease in the partial pressure of inspired oxygen, meaning there is only about 30% of the oxygen available per breath compared to sea level (Source 12). Therefore, climbers effectively have only about a third of the oxygen available to them."
+  },
+  {
+    "claim": {
+      "claim_text": "Most climbers use bottled oxygen on Mount Everest because its summit is so high that the air has only about a third of the oxygen available at sea level.",
+      "source_span": "most climbers use bottled oxygen"
+    },
+    "source_urls": [
+      "https://www.alanarnette.com/2013/08/19/oxygen-on-everest-reviewing-the-options",
+      "https://www.quora.com/Why-do-climbers-not-use-oxygen-bottles-on-Mt-Everest-ascent-or-descent-anymore",
+      "https://www.adlers.com.au/oxygen-at-altitude",
+      "https://www.cnn.com/2018/06/04/health/altitude-sickness-everest"
+    ],
+    "label": "supported",
+    "justification": "Most climbers do use bottled oxygen on Mount Everest, with reliable sources indicating that over 97% of climbers rely on supplemental oxygen (2, 3). The claim's reasoning is also supported, as at the summit, the atmospheric pressure is significantly lower, resulting in each breath providing approximately one-third of the oxygen available at sea level, even though the air still contains the same percentage of oxygen as at sea level (5, 7)."
+  },
+  {
+    "claim": {
+      "claim_text": "Purists insist that using bottled oxygen for climbing Mount Everest is cheating.",
+      "source_span": "purists insist that's cheating."
+    },
+    "source_urls": [
+      "https://www.facebook.com/DanielLeeMazur/posts/everests-oxygen-debate-safety-or-style-does-using-oxygen-make-the-climb-smartor-/10171339236170389",
+      "https://www.peakmountaineering.com/everest-solo-without-oxygen"
+    ],
+    "label": "supported",
+    "justification": "Evidence indicates that there is a strong sentiment among some climbers, described as 'purists' or those valuing a 'purest style', that climbing Mount Everest without supplemental oxygen is the only legitimate way. Daniel Mazur's post satirically defines 'Real climbers' as those who avoid oxygen, among other aids, highlighting this purist perspective (5). Additionally, Reinhold Messner's and Peter Habeler's ascent without supplemental oxygen is lauded as a 'monumental achievement' achieved in the 'purest style' (12)."
+  },
+  {
+    "claim": {
+      "claim_text": "The Nepalese government should cap the number of Mount Everest climbing permits.",
+      "source_span": "I really think the Nepalese government should cap the number of permits."
+    },
+    "source_urls": [
+      "https://www.france24.com/en/asia-pacific/20240512-nepal-s-supreme-court-orders-limit-on-number-of-everest-climbing-permits",
+      "https://geographical.co.uk/news/everest-climbing-into-crisis",
+      "https://www.pbs.org/newshour/world/overcrowding-on-mount-everest-contributes-to-rise-in-deaths",
+      "https://www.himalayanrecreation.com/blog/everest-traffic-jam"
+    ],
+    "label": "supported",
+    "justification": "The Nepalese government has been ordered by its Supreme Court to limit the number of climbing permits for Mount Everest (3, 13). This mandate addresses the issues of dangerous overcrowding, 'traffic jams,' and increased deaths that have been attributed to the reluctance to limit permits (10, 12)."
+  },
+  {
+    "claim": {
+      "claim_text": "Mount Everest was named after George Everest, a British surveyor, in 1865.",
+      "source_span": "Everest was named after George Everest, a British surveyor, in 1865."
+    },
+    "source_urls": [
+      "https://www.montana.edu/everest/facts/naming.html",
+      "https://www.history.com/articles/who-is-mount-everest-named-after",
+      "https://en.wikipedia.org/wiki/George_Everest",
+      "https://www.britannica.com/biography/George-Everest",
+      "https://allthatsinteresting.com/george-everest"
+    ],
+    "label": "supported",
+    "justification": "The evidence confirms that Mount Everest was officially named in 1865 by the Royal Geographical Society, honoring Sir George Everest, a British surveyor who served as Surveyor General of India. This naming occurred based on the recommendation of his successor, Andrew Waugh, despite Everest's own objections (Sources 1, 3, 9, 10, 12)."
+  }
+]
