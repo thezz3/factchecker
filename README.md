@@ -64,9 +64,9 @@ things to do next:
     - decide on threads or async https://mmantratech.com/threading-vs-asyncio-in-python-easy-examples-when-to-use-each
 
     speedup on our Mt. Everest test:
-    no parallelism:
-    parllelism basic:
-    parallelism advanced (research claim internal asyncio):
+    no parallelism: 
+    parllelism basic: 32.27s
+    parallelism advanced (research claim internal asyncio): 27.04s
 
 2. global evidence
 3. extension + DOM reading
