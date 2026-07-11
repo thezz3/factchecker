@@ -6,6 +6,7 @@ from google import genai
 from pydantic import BaseModel, Field 
 from typing import List, Optional
 from dotenv import load_dotenv
+import asyncio
 
 
 
@@ -21,10 +22,9 @@ class Claims(BaseModel):
     #later: add the thing for v2 where it can reword the verbatim and STIL return the verbatim
 
 load_dotenv()
-def extract_claims(input_text: str) -> Claims:
-    client = genai.Client()
-
-
+client = genai.Client()
+async def extract_claims(input_text: str) -> Claims:
+    
     claim_prompt = """
     Extract every factual claim from the text below. A claim is a statement that asserts something is true and could in principle be checked against evidence. Include opinions and value judgments as claims too for now; do not filter them out.
 
@@ -41,7 +41,7 @@ def extract_claims(input_text: str) -> Claims:
     Do not add claims that are not in the text. Do not merge separate claims together.
     """
     #for v2 - make it return an object with claim_text (cleaned up claims text) and source_span - exact substring of where it's being pulled from
-    response = client.models.generate_content(
+    response = await client.aio.models.generate_content(   #parallel - added asyncio
         model="gemini-2.5-flash", #change when not using free
         contents=[claim_prompt, input_text],
         config={
@@ -58,5 +58,5 @@ if __name__ == "__main__":
         content = file.read()
     input_text = content
     claims = []
-    claims_response = extract_claims(input_text)
+    claims_response = asyncio.run(extract_claims(input_text))
     print(claims_response)

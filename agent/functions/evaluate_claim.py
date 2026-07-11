@@ -5,6 +5,7 @@ from pydantic import BaseModel, Field
 from typing import List, Optional
 from dotenv import load_dotenv
 import os
+import asyncio
 from agent.functions.extract_claims import Claim
 from agent.functions.research_claim import Evidence, research_claim
 
@@ -25,7 +26,7 @@ load_dotenv()
 client = genai.Client()
 
 
-def evaluate_claim(input_claim: Claim, evidence_list: List[Evidence]) -> Verdict:
+async def evaluate_claim(input_claim: Claim, evidence_list: List[Evidence]) -> Verdict:
     #first, turn the evidence list into a string to feed into the prompt
     evidence_text = "\n".join([f"{i+1}. {evidence.content} (Source: {evidence.title}, URL: {evidence.url})" for i, evidence in enumerate(evidence_list)])
     evaluate_prompt = f"""
@@ -55,7 +56,7 @@ def evaluate_claim(input_claim: Claim, evidence_list: List[Evidence]) -> Verdict
     {evidence_text}
     """
     
-    response = client.models.generate_content(
+    response = await client.aio.models.generate_content(
         model="gemini-2.5-flash", #change when not using free
         contents=[evaluate_prompt],
         config={
@@ -71,9 +72,9 @@ if __name__ == "__main__":
         claim_text="The Great Wall of China is the only man-made structure visible from space with the naked eye",
         source_span="the Great Wall is the only man-made thing you can see from space"
     )
-    test_evidence = research_claim(test_claim, num_queries_per_claim=3)
+    test_evidence = asyncio.run(research_claim(test_claim, num_queries_per_claim=3))
     print("Evidence retrieved:")
     for i, evidence in enumerate(test_evidence):
         print(f"{i+1}. {evidence.content} (Source: {evidence.title}, URL: {evidence.url})")
-    verdict = evaluate_claim(test_claim, test_evidence)
+    verdict = asyncio.run(evaluate_claim(test_claim, test_evidence))
     print(verdict)
