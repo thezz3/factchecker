@@ -50,6 +50,13 @@ https://docs.tavily.com/sdk/python/reference    - AsyncTavilyClient
 
 https://mmantratech.com/threading-vs-asyncio-in-python-easy-examples-when-to-use-each - for learning and decision
 
+
+fastapi.tiangolo.com/tutorial/first-steps/
+
+developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+developer.chrome.com/docs/extensions/get-started
+github.com/mozilla/readability
+
 ERRORS:
 - decieded to handle in the orchestrator, not in each individual function
 
@@ -58,19 +65,31 @@ ERRORS:
 07/07:
 finished basic first agent
 things to do next:
-0. error handling in orchestrator  - done
+0. error handling in orchestrator  - DONE
 1. parallelism - these claims don't have to be processed sequentially  - DONE
     reasoning: eveyrting else builds on the agent and this makes it much faster/usable
     - decide on threads or async https://mmantratech.com/threading-vs-asyncio-in-python-easy-examples-when-to-use-each
 
     speedup on our Mt. Everest test:
-    no parallelism: 
+    no parallelism: 181s
     parllelism basic: 32.27s
     parallelism advanced (research claim internal asyncio): 27.04s
 
-2. global evidence
+2. global evidence -SKIP for now
 3. extension + DOM reading
-4. cloud/deploy stuff
+    IMMEDIATE/Short-term:
+   conceptual: extension/frontend is JS in browser, agent is Python elsewhere; they ONLY talk over HTTP
+   - a. FastAPI backend: wrap orchestrator in an HTTP endpoint (text in -> results JSON out)
+   - b. simple test client: paste text -> hit endpoint -> see results (proves the round-trip works)
+
+4. extension + DOM reading (LATER)
+   - c. browser extension (manifest v3): content script reads page DOM, sends text to backend
+   - d. clean article extraction (strip nav/ads/footer) via Readability
+
+5. verdict rendering (MUCH LATER - known hard, like Grammarly's hardest part)
+   - e. draw verdicts inline on the page without breaking layout
+
+6. cloud/deploy
 
 
 notes to do later:

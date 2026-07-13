@@ -5,7 +5,12 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "fastapi[standard]>=0.139.0",
     "google-genai>=2.8.0",
     "python-dotenv>=1.2.2",
     "tavily-python>=0.7.26",
+    "uvicorn>=0.51.0",
 ]
+#fastapi 
+[tool.fastapi]
+entrypoint = "backend.api_call_orchestrator:app"
