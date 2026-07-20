@@ -49,7 +49,7 @@ https://ai.google.dev/gemini-api/docs/migrate    - aio for asyncio
 https://docs.tavily.com/sdk/python/reference    - AsyncTavilyClient
 
 https://mmantratech.com/threading-vs-asyncio-in-python-easy-examples-when-to-use-each - for learning and decision
-
+developer.chrome.com/docs/extensions/develop/concepts/content-scripts   -for loading readability in manifest v3
 
 fastapi.tiangolo.com/tutorial/first-steps/
 
@@ -76,11 +76,11 @@ things to do next:
     parallelism advanced (research claim internal asyncio): 27.04s
 
 2. global evidence -SKIP for now
-3. extension + DOM reading
+3. extension + DOM reading 
     IMMEDIATE/Short-term:
    conceptual: extension/frontend is JS in browser, agent is Python elsewhere; they ONLY talk over HTTP
-   - a. FastAPI backend: wrap orchestrator in an HTTP endpoint (text in -> results JSON out)
-   - b. simple test client: paste text -> hit endpoint -> see results (proves the round-trip works)
+   - a. FastAPI backend: wrap orchestrator in an HTTP endpoint (text in -> results JSON out) - DONE
+   - b. simple test client: paste text -> hit endpoint -> see results (proves the round-trip works) - DONE
 
 4. extension + DOM reading (LATER)
    - c. browser extension (manifest v3): content script reads page DOM, sends text to backend
@@ -94,3 +94,25 @@ things to do next:
 
 notes to do later:
 - add error field to resutls object
+
+
+
+how to call fastapi:
+uv run fastapi dev
+
+this works because we set entrypoint in pyproject.toml ("#fastapi 
+[tool.fastapi]
+entrypoint = "backend.api_call_orchestrator:app"
+)
+
+
+07/18
+
+- got first Readability extension working (console logging)
+
+immediate next:
+- connect this to backend (add button so we don't accidentally start sending on every single page we're on)
+
+future:
+- we've seen that for sites like reddit that aren't articles that Readability expects, its makes it very hard, so we likely need to do it ourselves for reddit and twitter as the main two forum websites
+- obviously frontend parts underlining parts

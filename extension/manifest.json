@@ -1,0 +1,17 @@
+{
+  "name": "FactChecker Extension",
+  "description": "A Grammarly-style extension that factcheckes the articles you read on the web",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": "images/hello_extensions.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/Readability.js", "scripts/read_content.js"],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
