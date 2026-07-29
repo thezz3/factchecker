@@ -10,8 +10,9 @@
     {
       "js": ["scripts/Readability.js", "scripts/read_content.js"],
       "matches": [
-        "<all_urls>"
+        "https://www.naturalnews.com/2026-06-23-herbal-teas-natures-secret-health-pharma-suppression.html"
       ]
     }
   ]
 }
+

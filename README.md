@@ -116,3 +116,15 @@ immediate next:
 future:
 - we've seen that for sites like reddit that aren't articles that Readability expects, its makes it very hard, so we likely need to do it ourselves for reddit and twitter as the main two forum websites
 - obviously frontend parts underlining parts
+
+
+for 7/25 weekend: 
+- check the full pipeline works
+- begin work on highlighting
+
+
+07/28 
+- initially tried extension: this error happens:
+"Access to fetch at 'http://127.0.0.1:8000/factcheck' from origin 'https://www.naturalnews.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present."
+this is in console log
+The browser has a blanket rule — "web-page JavaScript may not read responses from a different origin unless that other server explicitly permits it."
