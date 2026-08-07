@@ -135,3 +135,15 @@ source for underlining: https://www.grammarly.com/blog/engineering/making-gramma
 
 https://developer.mozilla.org/en-US/docs/Web/API/CSS_Custom_Highlight_API
 
+08/07
+DONE: agent, parallelism, error handling, backend API, extension reads page + underlines refuted claims on live page, source-domain weighting in evaluate prompt
+
+NEXT STEPS:
+1. fuzzy matching (source_span -> exact on-page text, so more refuted claims underline)
+2. interactivity: bottom-right panel showing justification + source links on hover
+   - needs highlightsFromPoint + claim identity (map each highlight -> its result)
+3. agent quality: better source weighting/filtering, fix overstated-but-partly-true claims
+4. streaming: results underline as each finishes (as_completed + SSE), not all at once
+5. filter model: regex baseline -> trained classifier (ClaimBuster), drops non-checkable claims
+6. cloud deploy
+7. (optional) publish w/ BYOK
