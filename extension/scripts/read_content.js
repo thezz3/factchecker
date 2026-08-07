@@ -29,6 +29,8 @@ async function sendArticleContent() {
         }
         const results = await response.json();
         console.log("Fact-check results:", results);
+        // highlight the claims in the article
+        highlightClaims(results.results); // fixes the issue of passing the entire response object instead of just the results array
     } catch (error) {
         console.error("Error sending article content:", error);
     }

@@ -128,3 +128,10 @@ for 7/25 weekend:
 "Access to fetch at 'http://127.0.0.1:8000/factcheck' from origin 'https://www.naturalnews.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present."
 this is in console log
 The browser has a blanket rule — "web-page JavaScript may not read responses from a different origin unless that other server explicitly permits it."
+fixed by adding CORS middleware to api_call_orchestrator.py
+
+
+source for underlining: https://www.grammarly.com/blog/engineering/making-grammarly-feel-native-on-every-website/
+
+https://developer.mozilla.org/en-US/docs/Web/API/CSS_Custom_Highlight_API
+

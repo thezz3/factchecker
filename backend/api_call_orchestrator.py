@@ -26,7 +26,6 @@ app.add_middleware(
 
 
 
-
 async def read_fact_check(request: FactCheckRequest):
     results = await orchestrate_fact_checking(request.input_text, request.num_queries_per_claim)
     return FactCheckResponse(results=results)

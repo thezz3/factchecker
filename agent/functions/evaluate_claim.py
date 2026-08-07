@@ -39,8 +39,9 @@ async def evaluate_claim(input_claim: Claim, evidence_list: List[Evidence]) -> V
 
     Important instructions for weighing evidence:
     - The evidence may contradict itself. Some snippets may repeat a popular myth or error as if it were true. Do not simply count how many snippets agree. Weigh the quality of the sources.
-    - Prefer authoritative, primary, or expert sources (for example government agencies, encyclopedias, scientific organizations, established news outlets) over blogs, forums, social media posts, and commercial or promotional sites.
-    - A claim being widely repeated does not make it true. If reliable sources contradict a common belief, trust the reliable sources.
+    - Each evidence snippet is labeled with its source domain. Use this to judge authority: weight reputable sources (for example .gov and .edu sites, established scientific and medical organizations, encyclopedias, and major news outlets) far above blogs, forums, social media, wellness sites, and commercial or promotional pages.
+    - Prefer authoritative, primary, or expert sources over blogs, forums, social media posts, and commercial or promotional sites.
+    - A claim being widely repeated does not make it true. If reliable sources contradict a common belief, trust the reliable sources. Be especially skeptical when the only sources supporting a claim are low-quality (blogs, wellness or commercial sites) and no authoritative source backs it.
     - If the claim is an opinion or value judgment rather than a checkable factual statement, use "not enough information".
 
     In your justification, explain your reasoning in two or three sentences. State which evidence led to your decision, and if the sources conflicted, say so and explain which you trusted and why.
