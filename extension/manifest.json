@@ -8,7 +8,7 @@
   },
   "content_scripts": [
     {
-      "js": ["scripts/Readability.js", "scripts/highlight.js", "scripts/read_content.js"],
+      "js": ["scripts/Readability.js", "scripts/diff_match_patch.js", "scripts/highlight.js", "scripts/read_content.js"],
       "matches": [
         "https://www.naturalnews.com/2026-06-23-herbal-teas-natures-secret-health-pharma-suppression.html"
       ]

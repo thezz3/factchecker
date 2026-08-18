@@ -26,19 +26,31 @@ client = genai.Client()
 async def extract_claims(input_text: str) -> Claims:
     
     claim_prompt = """
-    Extract every factual claim from the text below. A claim is a statement that asserts something is true and could in principle be checked against evidence. Include opinions and value judgments as claims too for now; do not filter them out.
+    Extract every factual claim from the text below. A claim is a statement that asserts something is true and could in principle be checked against evidence.
 
-    A claim may span multiple sentences. If a single claim is spread across parts of consecutive sentences, treat it as one claim.
+Only extract checkable claims. Include statements about what happened, what exists, what a study or organization found, what someone did or said, and quantities or measurements.
 
-    For each claim, return two fields:
+Exclude the following:
+- Opinions and value judgments ("herbal teas are wonderful", "this is overrated")
+- Predictions about the future
+- Recommendations and advice ("you should drink this daily")
+- Rhetorical questions and calls to action
+- Vague statements with nothing specific to check ("things are changing fast")
 
-    - source_span: the claim copied EXACTLY and VERBATIM from the text, character for character, with no rewording, no fixed typos, no added or removed words. This must be an exact substring of the original text so it can be located in the source.
+Example of a claim to extract: "A 2018 trial found thyme extract reduced cough frequency by 40%."
+Example to skip: "Nature has always known best."
 
-    - claim_text: a clean, self-contained version of the same claim that makes sense on its own. Resolve pronouns and vague references (for example "it", "this", "the whole thing") into the specific thing they refer to, based on the surrounding context. The claim should be understandable without reading the rest of the text.
+A claim may span multiple sentences. If a single claim is spread across parts of consecutive sentences, treat it as one claim.
 
-    Example: if the text says "Mount Everest is the tallest mountain. It's overrated.", the second claim's source_span is "It's overrated" and its claim_text is "Mount Everest is overrated".
+For each claim, return two fields:
 
-    Do not add claims that are not in the text. Do not merge separate claims together.
+- source_span: the claim copied EXACTLY and VERBATIM from the text, character for character, with no rewording, no fixed typos, no added or removed words. This must be an exact substring of the original text so it can be located in the source.
+
+- claim_text: a clean, self-contained version of the same claim that makes sense on its own. Resolve pronouns and vague references (for example "it", "this", "the whole thing") into the specific thing they refer to, based on the surrounding context. The claim should be understandable without reading the rest of the text.
+
+Example: if the text says "Mount Everest is 8,849 meters tall. It was first summited in 1953.", the second claim's source_span is "It was first summited in 1953" and its claim_text is "Mount Everest was first summited in 1953".
+
+Do not add claims that are not in the text. Do not merge separate claims together.
     """
     #for v2 - make it return an object with claim_text (cleaned up claims text) and source_span - exact substring of where it's being pulled from
     response = await client.aio.models.generate_content(   #parallel - added asyncio

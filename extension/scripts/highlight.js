@@ -31,6 +31,9 @@ async function highlightClaims(results) {
         counter += textnode.textContent.length;
     }
     flatText = flatText.toLowerCase();
+    const dmp = new diff_match_patch();
+    dmp.Match_Threshold = 0.5;   // start at default, tune later
+    dmp.Match_Distance = 100000; // effectively ignore location
     function globalToNode(index) {
         for (let i = nodeOffsets.length - 1; i >= 0; i--) {
             //takes in an index in the full text and returns which node it's in and the offset within that node
@@ -50,14 +53,21 @@ async function highlightClaims(results) {
         if (result.label !== "refuted") continue; // skip this claim if it's not refuted
 
         const source_span = result.claim.source_span.toLowerCase(); // to lower case to match the below text nodes
+
         let startPos = 0;
         
         // find all matches of the source_span in the text nodes and create ranges for them
         while (startPos < flatText.length) {
-            // replaced indexOf
-            const index = flatText.indexOf(source_span, startPos);
+            // replaced indexOf with fuzzy matching using diff_match_patch
+            const pattern = source_span.slice(0, 30);
+            const index = dmp.match_main(flatText, pattern, startPos);
             // if there's no match it returns -1, so we break the loop
             if (index === -1) break;
+            //also, prevent infinite loop from fuzzy matchin
+            if (index < startPos) {
+                console.warn("Fuzzy match returned index less than startPos, breaking loop to avoid infinite loop.");
+                break;
+            }
             // otherwise, we push the range
             let startnodepair = globalToNode(index);
             let endnodepair = globalToNode(index + source_span.length);

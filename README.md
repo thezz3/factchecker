@@ -147,3 +147,4 @@ NEXT STEPS:
 5. filter model: regex baseline -> trained classifier (ClaimBuster), drops non-checkable claims
 6. cloud deploy
 7. (optional) publish w/ BYOK
+8. safety?
